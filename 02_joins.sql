@@ -1,4 +1,3 @@
--- SQL practice: JOIN
 -- Темы: INNER JOIN, LEFT JOIN, условие в ON и в WHERE, JOIN + GROUP BY + HAVING
 -- Таблицы создаются скриптом create_tables.sql
 
