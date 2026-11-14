@@ -1,4 +1,3 @@
--- SQL practice: день 5
 -- Темы: DATE_TRUNC, EXTRACT, интервалы, age(), группировка по периодам
 -- Таблицы создаются скриптом create_tables.sql
 
