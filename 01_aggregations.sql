@@ -1,4 +1,3 @@
--- SQL practice: clients / loans
 -- Темы: ORDER BY + LIMIT, IN, LIKE, агрегации, GROUP BY, HAVING, NULL, COUNT DISTINCT
 -- Таблицы создаются скриптом create_tables.sql
 
