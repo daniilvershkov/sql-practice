@@ -70,4 +70,21 @@ with citysum as (
     join loans l on c.client_id = l.client_id
     group by c.city
 )
-select city,ы
+select city, summ
+from citysum
+where summ > (select avg(summ) from citysum);
+
+
+-- Задача 7: кварталы, где сумма выданных кредитов выше средней суммы на квартал
+-- Тот же шаблон, группировка по кварталу выдачи.
+-- Колонки quarter и summ создала CTE, поэтому основной запрос берёт данные из неё (from quartersum), а не из loans.
+with quartersum as (
+    select sum(amount) as summ,
+           date_trunc('quarter', issue_date)::date as quarter
+    from loans
+    group by quarter
+)
+select quarter, summ
+from quartersum
+where summ > (select avg(summ) from quartersum)
+order by quarter;
